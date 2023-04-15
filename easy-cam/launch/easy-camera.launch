@@ -1,0 +1,17 @@
+<launch>
+ <group ns="easy">
+     <param name="sensor_id" value="0" />
+      <param name="topic_name"    value="/fisrt/image" />
+
+    <node pkg="easy-cam" name="easy" type="simple_camera.py" output="screen">
+    </node>
+  </group>
+  
+   <group >
+     <param name="sensor_id" value="1" />
+      <param name="topic_name"    value="/second/image" />
+
+    <node pkg="easy-cam" name="camera2" type="simple_camera.py" output="screen">
+    </node>
+  </group>
+</launch>
